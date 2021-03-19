@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import './App.css';
 import GamePage from './components/GamePageComponents/GamePage';
 import HomePageComponent from './components/StartPageComponent/HomePage';
-import { getDataFromSession } from './ServiceUtil/utils';
 
 function App() {
   const [redirectToGame,setRedirectToGame] = useState(false);
-  const [playerName] = useState(getDataFromSession('playerName') ? getDataFromSession('playerName') : '');
-  const [gameLevel] = useState(getDataFromSession('gameLevel') ? getDataFromSession('gameLevel') : '');
+  const [playerName,setPlayerName] = useState(undefined);
+  const [gameLevel,setGameLevel] = useState('EASY');
 
-  const enterInGame = () =>{
+  const enterInGame = (playerName,gameLevel) =>{
     if(playerName && gameLevel){
+      setPlayerName(playerName);
+      setGameLevel(gameLevel);
       setRedirectToGame(true);
     }
     else{
