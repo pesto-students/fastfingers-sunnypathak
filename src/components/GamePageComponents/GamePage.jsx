@@ -57,7 +57,6 @@ export default function GamePage({playerName, gameLevel}){
                         <Timer timerValue={timerValue} />
                     </div>
                     <div className="words-container">
-                        {/* <div className="word-displayed">{word.toUpperCase()}</div> */}
                         {getCurrentWord()}
                         <div className="user-input">
                             <input className="input-field" type="text" onChange={handleInputchange} value={playerInput} ref={userInputRef}  />
