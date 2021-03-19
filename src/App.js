@@ -6,8 +6,8 @@ import { getDataFromSession } from './ServiceUtil/utils';
 
 function App() {
   const [redirectToGame,setRedirectToGame] = useState(false);
-  const [playerName,setPlayerName] = useState(getDataFromSession('playerName') ? getDataFromSession('playerName') : '');
-  const [gameLevel,setGameLevel] = useState(getDataFromSession('gameLevel') ? getDataFromSession('gameLevel') : '');
+  const [playerName] = useState(getDataFromSession('playerName') ? getDataFromSession('playerName') : '');
+  const [gameLevel] = useState(getDataFromSession('gameLevel') ? getDataFromSession('gameLevel') : '');
 
   const enterInGame = () =>{
     if(playerName && gameLevel){

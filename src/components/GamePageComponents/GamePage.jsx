@@ -8,10 +8,10 @@ import Timer from '../Timer/TimerClock';
 
 export default function GamePage({playerName, gameLevel}){
 
-    const [word,setWord] = useState(getNewWords(gameLevel));
-    const [timerValue,setTimerValue] = useState(getTimerValue(word,gameLevel));
+    const [word] = useState(getNewWords(gameLevel));
+    const [timerValue] = useState(getTimerValue(word,gameLevel));
     const [playerInput, setPlayerInput] =  useState('');
-    const [currentScore, setCurrentScore] = useState(0);
+    //const [currentScore, setCurrentScore] = useState(0);
 
     const userInputRef = useRef(null);
 
