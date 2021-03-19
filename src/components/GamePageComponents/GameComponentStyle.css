@@ -1,0 +1,62 @@
+.game-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ff5155;
+  font-size: 42px;
+  flex: 1 0 auto;
+  padding: 30px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.player {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.playername {
+  padding: 0px 0px 0px 6px;
+}
+.game-level {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.player-icon {
+  padding: 10px;
+}
+.game-icon {
+  padding: 10px;
+}
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0px 50px 0px 0px;
+}
+.word-displayed {
+  font-size: 92px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: white;
+}
+.input-field {
+  width: 622px;
+  height: 90px;
+  margin: 45px 49.4px 30px 35.3px;
+  opacity: 0.59;
+  border-radius: 15px;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  background-color: white;
+  font-size: 45px;
+  text-align: center;
+  color: black;
+}
