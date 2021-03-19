@@ -8,7 +8,7 @@ const DIFFICULTY_FACTORS = {
 
 const WORDS_BY_LEVEL = {
     'EASY' : data.filter(word => word.length <= 4),
-    'MEDUIM' : data.filter(word => (word.length >= 5 && word.length <= 8)),
+    'MEDIUM' : data.filter(word => (word.length >= 5 && word.length <= 8)),
     'DIFFICULT' : data.filter(word => word.length > 8)
 }
 
