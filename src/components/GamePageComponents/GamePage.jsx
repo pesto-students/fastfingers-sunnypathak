@@ -18,8 +18,30 @@ export default function GamePage({playerName, gameLevel}){
     useEffect(() => {
         userInputRef.current.focus();
     },[])
+
     const handleInputchange = (e) => {
         setPlayerInput(e.target.value.toUpperCase());
+        
+    }
+
+    const getCurrentWord = () => {
+        const playerInputArr = playerInput.split('');
+        const currentWord = word.toUpperCase().split('');
+        return(
+            <div className="word-displayed">
+                {currentWord.map((char, i ) => {
+                    let color;
+                    if(i < playerInputArr.length){
+                        color = char === playerInputArr[i] ? '#54ba18' : '#445298';
+                    }
+                    return(
+                        <span key={i} style={{color: color}}>
+                            {char}
+                        </span>
+                    )
+                })}
+            </div>
+        )
     }
 
     return(
@@ -35,7 +57,7 @@ export default function GamePage({playerName, gameLevel}){
                         <Timer timerValue={timerValue} />
                     </div>
                     <div className="words-container">
-                        <div className="word-displayed">{word.toUpperCase()}</div>
+                        {getCurrentWord()}
                         <div className="user-input">
                             <input className="input-field" type="text" onChange={handleInputchange} value={playerInput} ref={userInputRef}  />
                         </div>
