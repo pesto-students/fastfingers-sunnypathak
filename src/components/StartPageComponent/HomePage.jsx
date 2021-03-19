@@ -4,7 +4,6 @@ import Header from './StartPageHeader';
 import {FaPlay} from 'react-icons/fa'
 import DifficutyLevel from './DifficultyLevel';
 import './startComponentStyle.css';
-import { getDataFromSession, setDataInSession } from '../../ServiceUtil/utils';
 
 
 
@@ -32,16 +31,7 @@ export default function StartPage({enterInGame}){
             nameInputRef.current.focus();
         }
         else{
-            if(getDataFromSession('playerName')){
-                sessionStorage.removeItem('playerName');
-            }
-            setDataInSession('playerName',playerName.toUpperCase());
-            if(getDataFromSession('gameLevel')){
-                sessionStorage.removeItem('gameLevel');
-            }
-            setDataInSession('gameLevel',difficultyLevel.toUpperCase());
-    
-           enterInGame();
+           enterInGame(playerName, difficultyLevel);
         }
         
     }
