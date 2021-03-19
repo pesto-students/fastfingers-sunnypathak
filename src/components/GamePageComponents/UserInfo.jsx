@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {FaUserAlt ,FaGamepad} from 'react-icons/fa'
 
-export default function UserInfo(){
-    const [playerName,setPlayerName] = useState('');
-    const [gameLevel,setGameLevel] = useState('');
-
-    useEffect(() => {
-        if(sessionStorage.getItem('playerName') && sessionStorage.getItem('gameLevel')){
-            setPlayerName(sessionStorage.getItem('playerName').toUpperCase());
-            setGameLevel(sessionStorage.getItem('gameLevel').toUpperCase());
-        }
-    },[])
+export default function UserInfo({playerName,gameLevel}){
+    
 
     return(
         <div className="user-info">

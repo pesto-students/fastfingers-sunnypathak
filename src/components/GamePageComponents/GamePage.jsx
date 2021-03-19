@@ -25,7 +25,7 @@ export default function GamePage({playerName, gameLevel}){
     return(
         <div className="game-page-container">
             <div className="game-header">
-                <UserInfo />
+                <UserInfo playerName={playerName} gameLevel={gameLevel} />
                 <GameInfo />
             </div>
             <div className="game-body">
