@@ -1,78 +1,79 @@
 .homePage-container {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    color: #ff5155;
-  }
-  .icon {
-    width: 17%;
-    margin: 4% 0 2% 0;
-    opacity: 0.7;
-  }
-  .game-headline {
-    font-size: 70px;
-    margin-top: -40px;
-    margin-bottom: 1%;
-    opacity: 0.99;
-  }
-  .tagline {
-    font-size: 22px;
-    margin: 0 0 2% 0;
-    display: inline-block;
-    position: relative;
-    line-height: 0.5;
-    text-align: center;
-    opacity: 0.64;
-  }
-  .game-inputs{
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      width: 100%;
-      align-self: center;
-  }
-  .player-name{
-      align-self: center;
-      width: 15%;
-      height: 5%;
-      padding: 20px 278px 20px 32px;
-      opacity: 0.59;
-      border-radius: 15px;
-      box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
-      background-color: white;
-      color:#032228;
-      font-size: 32px;
-      font-weight: 600;
-  }
-  .player-name::placeholder{
-    color:#032228;
-    font-size: 28px;
-    font-weight: 600;
-  }
-  .dropDown-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin:20px;
-  }
-.dropdown-header{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: 33%;
-    height: 5%;
-    border-radius: 15px;
-    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
-    border: solid 1px white;
-    background: transparent;
-    opacity: 0.59;
-    color: white;
-    font-size: 28px;
-    padding: 19px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color: #ff5155;
+}
+.icon {
+  width: 17%;
+  margin: 4% 0 2% 0;
+  opacity: 0.7;
+}
+.game-headline {
+  font-size: 70px;
+  margin-top: -40px;
+  margin-bottom: 1%;
+  opacity: 0.99;
+}
+.tagline {
+  font-size: 22px;
+  margin: 0 0 2% 0;
+  display: inline-block;
+  position: relative;
+  line-height: 0.5;
+  text-align: center;
+  opacity: 0.64;
 }
 
-.dropdown-options-list{
+.game-inputs {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  align-self: center;
+}
+.player-name {
+  align-self: center;
+  width: 15%;
+  height: 5%;
+  padding: 20px 278px 20px 32px;
+  opacity: 0.59;
+  border-radius: 15px;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  background-color: white;
+  color: #032228;
+  font-size: 32px;
+  font-weight: 600;
+}
+.player-name::placeholder {
+  color: #032228;
+  font-size: 28px;
+  font-weight: 600;
+}
+.dropDown-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+.dropdown-header {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 33%;
+  height: 5%;
+  border-radius: 15px;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  border: solid 1px white;
+  background: transparent;
+  opacity: 0.59;
+  color: white;
+  font-size: 28px;
+  padding: 19px;
+  justify-content: space-between;
+}
+
+.dropdown-options-list {
   width: 32%;
   margin-top: -7px;
   height: 5%;
@@ -86,7 +87,7 @@
   border-bottom-right-radius: 15px;
   min-height: 5%;
 }
-.dropdown-list{
+.dropdown-list {
   text-align: left;
   padding: 5px 0px 5px 2px;
   font-size: 25px;
@@ -94,29 +95,27 @@
   border-radius: 5px;
 }
 
-.dropdown-list:hover{
+.dropdown-list:hover {
   background-color: #053a45;
   color: white;
 }
-.start-game{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    color: #ff5155;
-    flex:1 0 auto;
-    font-size: 36px;
-    width: 20%;
-    justify-content: space-around;
-    cursor: pointer;
-    position: fixed;
-    margin-top: 15%;
+.start-game {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  color: #ff5155;
+  flex: 1 0 auto;
+  font-size: 36px;
+  width: 20%;
+  justify-content: space-around;
+  cursor: pointer;
+  position: fixed;
+  margin-top: 15%;
 }
-.start-game .play-icon{
-    padding: 48px 0px 0px 0px;
-
+.start-game .play-icon {
+  padding: 48px 0px 0px 0px;
 }
-.error{
+.error {
   font-size: 20px;
   color: #ff5155;
 }
- 

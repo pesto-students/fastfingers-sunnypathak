@@ -31,6 +31,8 @@ export default function StartPage({enterInGame}){
             nameInputRef.current.focus();
         }
         else{
+            sessionStorage.setItem('playerName',playerName);
+            sessionStorage.setItem('gameLevel',difficultyLevel);
            enterInGame(playerName, difficultyLevel);
         }
         
@@ -48,8 +50,8 @@ export default function StartPage({enterInGame}){
             <Header/>
             <div className=" game-inputs">
                 <input type="text" className="player-name" placeholder="TYPE YOUR NAME" ref={nameInputRef} name="playerName" onChange={handleInputChange} value={playerName}  />
-                <DifficutyLevel handleChange={handleDifficultyChange} selectedLevel={difficultyLevel}  />
                 {errorMesage()}
+                <DifficutyLevel handleChange={handleDifficultyChange} selectedLevel={difficultyLevel}  />
                 <div className="  start-game" onClick={startGame}>
                     <FaPlay color="#ff5155" className="play-icon" size="46px" />
                     <h3 className="play-game">START GAME</h3>

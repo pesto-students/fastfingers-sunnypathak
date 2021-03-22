@@ -14,12 +14,12 @@ const WORDS_BY_LEVEL = {
 
 export const getNewWords = (gameLevel) =>{
     const wordsArray = WORDS_BY_LEVEL[gameLevel];
-    return wordsArray[Math.floor(Math.random() * wordsArray.length)]; 
+    return wordsArray[Math.floor(Math.random() * wordsArray.length)].toUpperCase(); 
 }
 
 export const getTimerValue = (word,gameLevel) => {
     const difficultyFactor = DIFFICULTY_FACTORS[gameLevel];
-    return Math.ceil(word.length/difficultyFactor) * 1000;
+    return Math.round(word.length/difficultyFactor) * 1000 ;
 }
 
 export const setDataInSession = (key,value) => {
@@ -28,4 +28,8 @@ export const setDataInSession = (key,value) => {
 
 export const getDataFromSession = (key) => {
     return sessionStorage.getItem(key);
+}
+
+export const updateDifficultyFactor = (gameLevel) => {
+    DIFFICULTY_FACTORS[gameLevel] += 0.01;
 }
