@@ -14,7 +14,7 @@ export default function GamePage({playerName, gameLevel}){
     const [playerInput, setPlayerInput] =  useState('');
     const [gameOver,setGameOver] = useState(false);
     const [currentScore, setCurrentScore] = useState(0);
-    const [allScores,setAllScores] = useState(sessionStorage.getItem('allScores')?sessionStorage.getItem('allScores'):[]);
+    const [allScores] = useState(sessionStorage.getItem('allScores')?sessionStorage.getItem('allScores'):[]);
 
     const userInputRef = useRef(null);
 
@@ -95,7 +95,7 @@ export default function GamePage({playerName, gameLevel}){
         <div className="game-page-container">
             <div className="game-header">
                 <UserInfo playerName={playerName} gameLevel={gameLevel} />
-                <GameInfo intialTimerVal={currentScore} endGameFlag={false} updateScore={updateScore} />
+                <GameInfo intialTimerVal={0} endGameFlag={false} updateScore={updateScore} />
             </div>
             <div className="game-body">
                 <div className="score-board"></div>

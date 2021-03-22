@@ -41,8 +41,8 @@ export default function EndGame({playerName, gameLevel, currentScore, allScores}
                 {showHighScore()}
             </div>
             <div className="play-again" onClick={playAgain}>
-                <span className="play-again-icon"><AiOutlineReload color="#ff5155" size="72px"/><span className="play-again-txt">Play Again</span></span>
-                
+                <span className="play-again-icon"><AiOutlineReload color="#ff5155" /></span>
+                <span className="play-again-txt">Play Again</span>
             </div>
         </div>
     )    

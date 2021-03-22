@@ -13,16 +13,23 @@ export default function GameInfo({initialTimerVal,endGameFlag,updateScore}){
         return `${getMinutes} : ${getSeconds}`
       }
 
+      
       useEffect(() =>{
         if(endGameFlag){
             clearInterval(scoreInterval);
             sessionStorage.setItem('currentScore',scoreTimer)
         }
         else{
-            const score = formatTime();
+            const score = () => {
+                const getSeconds = `0${(scoreTimer % 60)}`.slice(-2)
+                const minutes = `${Math.floor(scoreTimer / 60)}`
+                const getMinutes = `0${minutes % 60}`.slice(-2)
+            
+                return `${getMinutes} : ${getSeconds}`
+            }
             updateScore(score);
         }
-      },[scoreTimer,endGameFlag])
+      },[endGameFlag, scoreInterval,scoreTimer,updateScore])
 
     useEffect(() => {
         setScoreInterval(setInterval(() => {
