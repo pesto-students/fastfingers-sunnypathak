@@ -8,7 +8,7 @@ export default function Header(){
                 <img src={keyboardIcon} className="icon" alt="" />
             </span>
             <span className="game-headline">fast fingers</span>
-            <h2 className="tagline">__________the ultimate typing game__________</h2>
+            <h2 className="tagline">__________      the ultimate typing game      __________</h2>
         </div>
         )
 }

@@ -28,10 +28,22 @@
   letter-spacing: normal;
 }
 .play-again {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 20%;
+  margin-left: 740px;
   cursor: pointer;
 }
+.play-again-icon {
+  display: flex;
+  align-self: flex-end;
+  font-size: 60px;
+}
 .play-again-txt {
-  font-size: 74px;
+  display: flex;
+  align-self: flex-start;
+  font-size: 54px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
