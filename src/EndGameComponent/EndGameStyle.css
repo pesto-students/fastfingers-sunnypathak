@@ -1,0 +1,42 @@
+.score-card {
+  padding: 80px;
+  color: white;
+}
+
+.game-number {
+  font-size: 70px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+.score {
+  font-size: 118px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+.high-score {
+  font-size: 53px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+}
+.play-again {
+  cursor: pointer;
+}
+.play-again-txt {
+  font-size: 74px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  padding-left: 25px;
+  color: #ff5155;
+}
