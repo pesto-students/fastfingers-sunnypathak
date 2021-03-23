@@ -9,7 +9,7 @@ import './startComponentStyle.css';
 
 
 export default function StartPage({enterInGame,fromEndGamePage}){
-    const [playerName, setPlayerName] = useState('');
+    const [playerName, setPlayerName] = useState(sessionStorage.getItem('playerName') !== null?sessionStorage.getItem('playerName'):'');
     const [difficultyLevel, setDifficultyLevel] = useState('EASY')
     const [errorMsg, setErrorMsg] = useState('');
     const nameInputRef = useRef(null);
@@ -61,7 +61,8 @@ export default function StartPage({enterInGame,fromEndGamePage}){
         <div >
             <Header/>
             <div className=" game-inputs">
-                <input type="text" className="player-name" placeholder="TYPE YOUR NAME" ref={nameInputRef} name="playerName" onChange={handleInputChange} value={playerName}  />
+                {playerName !== ''? <div className='existing-player'><span className='welcome-note'>Hey {playerName}, Welcome Back</span><span className="steps-to-move">Please select the difficulty Level and start the game</span></div>:<input type="text" className="player-name" placeholder="TYPE YOUR NAME" ref={nameInputRef} name="playerName" onChange={handleInputChange} value={playerName}  />}
+                
                 {errorMesage()}
                 <DifficutyLevel handleChange={handleDifficultyChange} selectedLevel={difficultyLevel}  />
                 <div className="  start-game" onClick={startGame}>

@@ -9,7 +9,8 @@ export default function ProgressCircle({
   circleOneStroke,
   circleTwoStroke,
   minutes,
-  seconds
+  seconds,
+  milliSeconds
 }) {
   const [offset, setOffset] = useState(0);
   const circleRef = useRef(null);
@@ -22,7 +23,7 @@ export default function ProgressCircle({
     const progressOffset = ((100 - progress) / 100) * circumference;
     setOffset(progressOffset);
     circleRef.current.style =
-      "transition: stroke-dashoffset 1s ease-in-out;";
+      "transition: stroke-dashoffset 100ms ease-in-out;";
   }, [setOffset, circumference, progress, offset]);
 
   return (
@@ -48,9 +49,9 @@ export default function ProgressCircle({
           strokeDashoffset={offset}
         />
         <text x={`${center}`} y={`${center}`} className="svg-circle-text">
-        {("0" + minutes).slice(-2) +
+        {("0" + seconds).slice(-2) +
             ":" +
-            ("0" + seconds).slice(-2)}
+            ("0" + milliSeconds).slice(-2)}
         </text>
       </svg>
     </>

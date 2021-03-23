@@ -8,6 +8,7 @@ export default class Timer extends Component {
       timerValue: props.timerValue,
       minutes: 0,
       seconds: 0,
+      milliSeconds:0,
       progress: 100,
       color: "#ff5155"
     };
@@ -16,13 +17,15 @@ export default class Timer extends Component {
   decrementTimeRemaining = () => {
     if (this.state.timerValue > 0) {
       this.setState({
-        timerValue: this.state.timerValue - 1000
+        timerValue: this.state.timerValue - 100
       });
       this.setState({
         minutes: new Date(this.state.timerValue>0?this.state.timerValue:0).getUTCMinutes(),
-        seconds: new Date(this.state.timerValue>0?this.state.timerValue:0).getSeconds()
+        seconds: new Date(this.state.timerValue>0?this.state.timerValue:0).getSeconds(),
+        milliSeconds : (this.state.timerValue % 1000)/10,
       });
-const timePercentageLeft = ((this.state.timerValue/1000) / (this.props.timerValue/1000)) * 100
+      console.log(this.state.milliSeconds);
+const timePercentageLeft = ((this.state.timerValue) / (this.props.timerValue)) * 100
       this.setState({
         progress:timePercentageLeft,
         color:'#ff5155'
@@ -41,7 +44,7 @@ const timePercentageLeft = ((this.state.timerValue/1000) / (this.props.timerValu
     
     this.interval = setInterval(() => {
       this.decrementTimeRemaining();
-    }, 1000);
+    }, 100);
   }
 
   componentDidUpdate(prevProps){
@@ -63,6 +66,7 @@ const timePercentageLeft = ((this.state.timerValue/1000) / (this.props.timerValu
     const {
       minutes,
       seconds,
+      milliSeconds,
       progress,
       color
     } = this.state;
@@ -75,6 +79,7 @@ const timePercentageLeft = ((this.state.timerValue/1000) / (this.props.timerValu
         circleTwoStroke={color}
         minutes={minutes}
         seconds={seconds}
+        milliSeconds={milliSeconds}
       />
     );
   }
