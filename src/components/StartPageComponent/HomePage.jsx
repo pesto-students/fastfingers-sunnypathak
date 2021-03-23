@@ -61,7 +61,7 @@ export default function StartPage({enterInGame,fromEndGamePage}){
         <div >
             <Header/>
             <div className=" game-inputs">
-                {playerName !== ''? <div className='existing-player'><span className='welcome-note'>Hey {playerName}, Welcome Back</span><span className="steps-to-move">Please select the difficulty Level and start the game</span></div>:<input type="text" className="player-name" placeholder="TYPE YOUR NAME" ref={nameInputRef} name="playerName" onChange={handleInputChange} value={playerName}  />}
+                {sessionStorage.getItem('playerName') !== null ? <div className='existing-player'><span className='welcome-note'>Hey {playerName}, Welcome Back</span><span className="steps-to-move">Please select the difficulty Level and start the game</span></div>:<input type="text" className="player-name" placeholder="TYPE YOUR NAME" ref={nameInputRef} name="playerName" onChange={handleInputChange} value={playerName}  />}
                 
                 {errorMesage()}
                 <DifficutyLevel handleChange={handleDifficultyChange} selectedLevel={difficultyLevel}  />

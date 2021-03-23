@@ -41,7 +41,7 @@ const timePercentageLeft = ((this.state.timerValue) / (this.props.timerValue)) *
   };
 
   componentDidMount() {
-    
+    if(this.interval) clearInterval(this.interval);
     this.interval = setInterval(() => {
       this.decrementTimeRemaining();
     }, 100);
@@ -57,7 +57,7 @@ const timePercentageLeft = ((this.state.timerValue) / (this.props.timerValue)) *
       if(this.interval !== null) clearInterval(this.interval);
       this.interval = setInterval(() => {
         this.decrementTimeRemaining();
-      }, 1000);
+      }, 100);
 
     }
   }
