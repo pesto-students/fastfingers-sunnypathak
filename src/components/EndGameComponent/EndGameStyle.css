@@ -67,3 +67,46 @@
   text-align: left;
   padding: 30px;
 }
+@media all and (max-width: 780px) {
+  .game-header {
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  .user-info {
+    align-self: center;
+  }
+  .player-icon {
+    padding: 0px;
+  }
+  .game-info {
+    padding: 0px;
+    text-align: center;
+  }
+  .game-icon {
+    padding: 0px;
+  }
+  .game-number {
+    font-size: 20px;
+  }
+  .score {
+    font-size: 30px;
+  }
+  .high-score {
+    font-size: 30px;
+  }
+  .play-again {
+    width: 65%;
+    margin-left: 60px;
+  }
+  .play-again-icon {
+    font-size: 50px;
+  }
+  .play-again-txt {
+    font-size: 36px;
+    padding-left: 25px;
+  }
+  .quit {
+    font-size: 37px;
+  }
+}

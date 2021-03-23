@@ -100,3 +100,57 @@
   text-align: left;
   padding: 30px;
 }
+
+@media all and (max-width: 780px) {
+  .game-header {
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  .player-icon {
+    padding: 0px;
+  }
+  .user-info {
+    align-self: center;
+  }
+  .game-info {
+    padding: 0px;
+    text-align: center;
+  }
+  .game-icon {
+    padding: 0px;
+  }
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    order: 1;
+  }
+  .game-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .count-down {
+    width: 100%;
+  }
+  .word-displayed {
+    font-size: 50px;
+    margin-left: 2%;
+  }
+  .input-field {
+    width: 80%;
+    height: 5%;
+    margin: 0px 0px 0px 0px;
+  }
+  .score-board {
+    width: 65%;
+    align-self: center;
+    margin-left: 0px;
+
+    order: 2;
+  }
+  .stop-game {
+    width: 50%;
+    font-size: 30px;
+  }
+}

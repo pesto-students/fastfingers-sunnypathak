@@ -130,3 +130,49 @@
 .steps-to-move {
   font-size: 22px;
 }
+
+@media all and (max-width: 780px) {
+  .icon {
+    width: 12%;
+  }
+  .game-headline {
+    font-size: 40px;
+    padding: 63px 0px 0px 0px;
+  }
+  .tagline {
+    font-size: 12px;
+  }
+  .game-inputs {
+    padding: 20px 0px 0px 0px;
+  }
+  .player-name {
+    width: 75%;
+    padding: 0px;
+    border-radius: 5px;
+  }
+  .dropDown-wrapper {
+    margin-top: 35px;
+  }
+  .dropdown-header {
+    width: 84%;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .dropdown-options-list {
+    width: 85%;
+  }
+  .welcome-note {
+    font-size: 18px;
+  }
+  .steps-to-move {
+    font-size: 18px;
+  }
+  .start-game {
+    font-size: 24px;
+    width: 61%;
+    margin-top: 60%;
+  }
+  .start-game .play-icon {
+    padding: 24px 0px 0px 0px;
+  }
+}
