@@ -4,7 +4,7 @@
 }
 
 .game-number {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -12,7 +12,7 @@
   letter-spacing: normal;
 }
 .score {
-  font-size: 118px;
+  font-size: 74px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -32,7 +32,7 @@
   flex-direction: row;
   justify-content: space-around;
   width: 20%;
-  margin-left: 740px;
+  margin-left: 730px;
   cursor: pointer;
 }
 .play-again-icon {
@@ -51,4 +51,19 @@
   letter-spacing: normal;
   padding-left: 25px;
   color: #ff5155;
+}
+.quit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  color: #ff5155;
+  font-size: 67px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  padding: 30px;
 }

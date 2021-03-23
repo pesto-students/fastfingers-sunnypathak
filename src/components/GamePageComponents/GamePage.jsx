@@ -5,7 +5,9 @@ import './GameComponentStyle.css'
 import GameInfo from './GameInfo';
 import { getNewWords, getTimerValue, updateDifficultyFactor } from '../../ServiceUtil/utils';
 import Timer from '../Timer/TimerClock';
-import EndGame from '../../EndGameComponent/EndGame';
+import EndGame from '../EndGameComponent/EndGame';
+import ScoreBoard from '../ScoreBoard/ScoreBoard';
+import {GiCancel} from 'react-icons/gi';
 
 export default function GamePage({playerName, gameLevel}){
 
@@ -14,7 +16,7 @@ export default function GamePage({playerName, gameLevel}){
     const [playerInput, setPlayerInput] =  useState('');
     const [gameOver,setGameOver] = useState(false);
     const [currentScore, setCurrentScore] = useState(0);
-    const [allScores] = useState(sessionStorage.getItem('allScores')?sessionStorage.getItem('allScores'):[]);
+    const [allScores,setAllScores] = useState(sessionStorage.getItem('scoreBoardArr')?sessionStorage.getItem('scoreBoardArr'):[]);
 
     const userInputRef = useRef(null);
 
@@ -41,29 +43,31 @@ export default function GamePage({playerName, gameLevel}){
 
     const onTimeUp = () =>{
         sessionStorage.setItem('currentScore',currentScore);
-        // let data = JSON.parse(sessionStorage.getItem('allScores')) || [];
-        // const currentGameObj = {
-        //     name:`GAME ${data.length+1}`,
-        //     score:currentScore,
-        //     isHighScore:false
-        // }
+        console.log();
+        let data = sessionStorage.getItem('scoreBoardArr') !== null ? JSON.parse(sessionStorage.getItem('scoreBoardArr')) : [];
+        const currentGameObj = {
+            name:`GAME ${data.length+1}`,
+            score:currentScore,
+            isHighScore:false
+        }
 
-        // if(data.length === 0) currentGameObj.isHighScore=true;
-        // else{
-        //     data.forEach((obj,i) => {
-        //         if(obj.isHighScore && (obj.score < currentScore)){
-        //             currentGameObj.isHighScore = true;
-        //             obj.isHighScore = false
-        //         }
-        //     });
-        // }
+        if(data.length === 0) currentGameObj.isHighScore=true;
+        else{
+            data.forEach((obj,i) => {
+                if(obj.isHighScore && (obj.score < currentScore)){
+                    currentGameObj.isHighScore = true;
+                    obj.isHighScore = false
+                }
+            });
+        }
 
-        // data.push(currentGameObj);
-        // setAllScores(data);
-        // sessionStorage.setItem('allScores', JSON.stringify(data));
+        data.push(currentGameObj);
+        setAllScores(data);
+        sessionStorage.setItem('scoreBoardArr', JSON.stringify(data));
 
         setGameOver(true);
     }
+
 
     const getCurrentWord = () => {
         const playerInputArr = playerInput.split('');
@@ -95,10 +99,10 @@ export default function GamePage({playerName, gameLevel}){
         <div className="game-page-container">
             <div className="game-header">
                 <UserInfo playerName={playerName} gameLevel={gameLevel} />
-                <GameInfo intialTimerVal={0} endGameFlag={false} updateScore={updateScore} />
+                <GameInfo intialTimerVal={currentScore} endGameFlag={false} updateScore={updateScore} />
             </div>
             <div className="game-body">
-                <div className="score-board"></div>
+                <div className="score-board"><span className="score-board-heading">Score Board</span><ScoreBoard  /></div>
                 <div className="game-container">
                     <div className="count-down">
                     <Timer timerValue={timerValue} currentWord={word} onTimeUp={onTimeUp} />
@@ -110,6 +114,7 @@ export default function GamePage({playerName, gameLevel}){
                         </div>
                     </div>
                 </div>
+                <div className="stop-game" onClick={onTimeUp}><GiCancel /><span>STOP GAME</span></div>
             </div>
         </div>
     )
