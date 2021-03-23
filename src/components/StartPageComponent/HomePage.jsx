@@ -3,15 +3,17 @@ import propTypes from 'prop-types';
 import Header from './StartPageHeader';
 import {FaPlay} from 'react-icons/fa'
 import DifficutyLevel from './DifficultyLevel';
+import GamePage from '../GamePageComponents/GamePage';
 import './startComponentStyle.css';
 
 
 
-export default function StartPage({enterInGame}){
+export default function StartPage({enterInGame,fromEndGamePage}){
     const [playerName, setPlayerName] = useState('');
     const [difficultyLevel, setDifficultyLevel] = useState('EASY')
     const [errorMsg, setErrorMsg] = useState('');
     const nameInputRef = useRef(null);
+    const [endGameFlag,setEndGameFlag] = useState(false);
 
     const handleInputChange = (event) =>{
         event.persist();
@@ -33,7 +35,12 @@ export default function StartPage({enterInGame}){
         else{
             sessionStorage.setItem('playerName',playerName);
             sessionStorage.setItem('gameLevel',difficultyLevel);
-           enterInGame(playerName, difficultyLevel);
+            if(fromEndGamePage){
+                setEndGameFlag(true);
+            }
+            else{
+                enterInGame(playerName, difficultyLevel);
+            }
         }
         
     }
@@ -44,6 +51,11 @@ export default function StartPage({enterInGame}){
         }
     }
 
+    if(endGameFlag){
+        return(
+            <GamePage playerName={playerName} gameLevel={difficultyLevel} />
+        )
+    }
 
     return(
         <div >

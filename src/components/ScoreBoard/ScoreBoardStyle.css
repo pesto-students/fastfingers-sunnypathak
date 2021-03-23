@@ -1,0 +1,15 @@
+.score-list {
+  list-style-type: none;
+}
+
+.scores {
+  color: white;
+  font-size: 25px;
+  text-align: left;
+}
+.best-score {
+  font-size: 15px;
+  text-align: left;
+  margin-left: -136px;
+  color: lawngreen;
+}

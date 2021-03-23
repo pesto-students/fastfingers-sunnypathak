@@ -3,9 +3,11 @@
 }
 html {
   height: 100%;
-  background-image: linear-gradient(to bottom,#000000,#063c4799 160%), url("./images/Group_243.svg");
+  background-image: linear-gradient(to bottom, #000000, #063c4799 160%),
+    url("./images/Group_243.svg");
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Lobster", cursive;
+  font-family: "Play", sans-serif;
 }
