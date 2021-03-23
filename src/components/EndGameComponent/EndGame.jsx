@@ -18,7 +18,6 @@ export default function EndGame({playerName, gameLevel, currentScore, allScores}
     const loginAgain = () => {
         sessionStorage.removeItem('scoreBoardArr');
         sessionStorage.removeItem('currentScore');
-        sessionStorage.removeItem('playerName');
         sessionStorage.removeItem('gameLevel');
         setGoToLogin(true);
     }
