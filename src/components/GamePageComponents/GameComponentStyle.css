@@ -158,5 +158,6 @@
     width: 50%;
     font-size: 30px;
     padding: 10px;
+    position: fixed;
   }
 }
