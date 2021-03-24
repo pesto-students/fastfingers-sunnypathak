@@ -22,10 +22,24 @@ export default class Timer extends Component {
         seconds: new Date(this.state.timerValue).getUTCSeconds(),
         milliSeconds : (this.state.timerValue % 1000)/10,
       });
-const timePercentageLeft = ((this.state.timerValue) / (this.props.timerValue)) * 100
+    const timePercentageLeft = ((this.state.timerValue) / (this.props.timerValue)) * 100
+    if(timePercentageLeft <= 100 && timePercentageLeft >50 ){
+      this.setState({
+        color:'#47b989'
+      })
+    }
+    else if(timePercentageLeft <= 50 && timePercentageLeft > 15){
+      this.setState({
+        color:'orange'
+      })
+    }
+    else if(timePercentageLeft <= 25 ){
+      this.setState({
+        color:'#ff5155'
+      })
+    }
       this.setState({
         progress:timePercentageLeft,
-        color:'#ff5155'
       })
     }
     else if(this.state.timerValue <= 0){

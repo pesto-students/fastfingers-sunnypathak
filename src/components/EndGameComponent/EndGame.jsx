@@ -21,6 +21,8 @@ export default function EndGame({playerName, gameLevel, currentScore, allScores}
         sessionStorage.removeItem('gameLevel');
         setGoToLogin(true);
     }
+
+    
     useEffect(() => { 
         setNewHighScore(allScores[allScores.length-1].isHighScore);
     },[allScores])
@@ -46,7 +48,7 @@ export default function EndGame({playerName, gameLevel, currentScore, allScores}
             <div className="score-card">
                 <div className="game-number">SCORE : GAME {allScores.length}</div>
                 <div className="score">{currentScore}</div>
-                {newHighScore && <div className="high-score">New High Score</div> }
+                {newHighScore ? <div className="high-score">BRAVO !! You Got the High Score</div> : <div className="high-score">Ohh!! Keep trying</div> }
             </div>
             <div className="play-again" onClick={playAgain}>
                 <span className="play-again-icon"><AiOutlineReload color="#ff5155" /></span>

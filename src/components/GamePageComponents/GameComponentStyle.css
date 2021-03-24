@@ -103,9 +103,11 @@
 
 @media all and (max-width: 780px) {
   .game-header {
-    font-size: 28px;
+    font-size: 22px;
+    padding: 0px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .player-icon {
     padding: 0px;
@@ -144,13 +146,17 @@
   }
   .score-board {
     width: 65%;
+    position: fixed;
     align-self: center;
     margin-left: 0px;
-
     order: 2;
+    max-height: 200px;
+    overflow: auto;
+    margin-top: 150%;
   }
   .stop-game {
     width: 50%;
     font-size: 30px;
+    padding: 10px;
   }
 }

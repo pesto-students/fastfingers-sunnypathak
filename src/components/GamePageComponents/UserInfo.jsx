@@ -7,11 +7,11 @@ export default function UserInfo({playerName,gameLevel}){
     return(
         <div className="user-info">
             <div className="player">
-                <FaUserAlt className="player-icon" color="#ff5155" size="32px"/>
+                <FaUserAlt className="player-icon" color="#ff5155" />
                 <span className="playername">{playerName}</span>
             </div>
             <div className="game-level">
-                <FaGamepad className="game-icon" color="#ff5155" size="40px" />
+                <FaGamepad className="game-icon" color="#ff5155"  />
                 <span className="game-level">LEVEL : {gameLevel}</span>
             </div>
         </div>
