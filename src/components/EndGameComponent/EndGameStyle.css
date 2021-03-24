@@ -1,0 +1,124 @@
+.score-card {
+  padding: 80px;
+  color: white;
+}
+
+.game-number {
+  font-size: 60px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+.score {
+  font-size: 74px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+.high-score {
+  font-size: 53px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+}
+.play-again {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 20%;
+  margin-left: 730px;
+  cursor: pointer;
+}
+.play-again-icon {
+  display: flex;
+  align-self: flex-end;
+  font-size: 60px;
+}
+.play-again-txt {
+  display: flex;
+  align-self: flex-start;
+  font-size: 54px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  padding-left: 25px;
+  color: #ff5155;
+}
+.quit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  color: #ff5155;
+  font-size: 67px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  padding: 30px;
+}
+.auto-restart {
+  color: wheat;
+  font-size: 40px;
+  font-weight: 500;
+}
+@media all and (max-width: 780px) {
+  .game-header {
+    font-size: 22px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .user-info {
+    align-self: center;
+  }
+  .player-icon {
+    padding: 0px;
+  }
+  .game-info {
+    padding: 0px;
+    text-align: center;
+  }
+  .game-icon {
+    padding: 0px;
+  }
+  .game-number {
+    font-size: 20px;
+  }
+  .score {
+    font-size: 30px;
+  }
+  .high-score {
+    font-size: 30px;
+  }
+  .play-again {
+    width: 65%;
+    margin-left: 60px;
+  }
+  .play-again-icon {
+    font-size: 50px;
+  }
+  .play-again-txt {
+    font-size: 36px;
+    padding-left: 25px;
+  }
+  .auto-restart {
+    color: wheat;
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .quit {
+    font-size: 37px;
+  }
+}

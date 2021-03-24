@@ -1,0 +1,163 @@
+.game-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ff5155;
+  font-size: 42px;
+  flex: 1 0 auto;
+  padding: 30px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.player {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.playername {
+  padding: 0px 0px 0px 6px;
+}
+.game-level {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.player-icon {
+  padding: 10px;
+}
+.game-icon {
+  padding: 10px;
+}
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0px 50px 0px 0px;
+}
+
+.word-displayed {
+  font-size: 92px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: white;
+}
+.input-field {
+  width: 622px;
+  height: 90px;
+  margin: 45px 49.4px 30px 35.3px;
+  opacity: 0.59;
+  border-radius: 15px;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  background-color: white;
+  font-size: 45px;
+  text-align: center;
+  color: black;
+}
+.score-board {
+  width: 15%;
+  margin-left: -27%;
+  border: #ff5155 4px solid;
+  border-radius: 20px;
+}
+.game-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.game-container {
+  margin-left: -20%;
+}
+.score-board-heading {
+  text-align: center;
+  color: #ff5155;
+  font-size: 24px;
+  font-weight: 500;
+}
+.stop-game {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  color: #ff5155;
+  font-size: 50px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  padding: 30px;
+}
+
+@media all and (max-width: 780px) {
+  .game-header {
+    font-size: 22px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .player-icon {
+    padding: 0px;
+  }
+  .user-info {
+    align-self: center;
+  }
+  .game-info {
+    padding: 0px;
+    text-align: center;
+  }
+  .game-icon {
+    padding: 0px;
+  }
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    order: 1;
+  }
+  .game-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .count-down {
+    width: 100%;
+  }
+  .word-displayed {
+    font-size: 50px;
+    margin-left: 2%;
+  }
+  .input-field {
+    width: 80%;
+    height: 5%;
+    margin: 0px 0px 0px 0px;
+  }
+  .score-board {
+    width: 65%;
+    position: fixed;
+    align-self: center;
+    margin-left: 0px;
+    order: 2;
+    max-height: 200px;
+    overflow: auto;
+    margin-top: 150%;
+  }
+  .stop-game {
+    width: 50%;
+    font-size: 30px;
+    padding: 10px;
+    position: fixed;
+  }
+}
