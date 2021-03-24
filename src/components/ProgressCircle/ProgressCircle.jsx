@@ -8,7 +8,6 @@ export default function ProgressCircle({
   strokeWidth,
   circleOneStroke,
   circleTwoStroke,
-  minutes,
   seconds,
   milliSeconds
 }) {

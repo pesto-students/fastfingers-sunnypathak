@@ -122,15 +122,25 @@
 .existing-player {
   display: flex;
   flex-direction: column;
-  color: #ff5155;
+  color: #ff8951;
 }
 .welcome-note {
   font-size: 46px;
 }
 .steps-to-move {
-  font-size: 22px;
+  font-size: 20px;
 }
-
+.or {
+  font-size: 28px;
+}
+.clear-session {
+  cursor: pointer;
+  font-size: 30px;
+  width: 30%;
+  align-self: center;
+  text-decoration: underline;
+  color: wheat;
+}
 @media all and (max-width: 780px) {
   .icon {
     width: 12%;
@@ -170,9 +180,13 @@
   .start-game {
     font-size: 24px;
     width: 61%;
-    margin-top: 60%;
+    margin-top: 75%;
   }
   .start-game .play-icon {
     padding: 24px 0px 0px 0px;
+  }
+  .clear-session {
+    width: 70%;
+    font-size: 18px;
   }
 }
